@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import type { RootState } from "../store";
+import { useSelector, useDispatch } from "react-redux";
+import { update } from "../storage/slices/productSlice";
 
 export default  function ProductList() {
+    const value = useSelector((state: RootState) => state.product.value);
+    const dispatch = useDispatch();
+
     return (
         <>
             <h1>Product list</h1>
