@@ -15,7 +15,10 @@ export default function ProductEdit({ product, setEditMode } : ProductViewProps)
     return (
         <>
             <main className="productDetails">
-                <h1>{product.name}</h1>
+                <div className="topPanel">
+                    <h1>Editin: {product.name}</h1>
+                    <button onClick={setEditMode}>Save</button>
+                </div>
                 <p>{product.description}</p>
                 <section className="productImages">
                     {product.images.map(image => (

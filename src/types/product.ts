@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { MouseEventHandler } from "react"
 
 export type Product = {
     name: string
@@ -14,5 +14,5 @@ export type ImageObject = {
 
 export type ProductViewProps = {
     product: Product
-    setEditMode: Dispatch<SetStateAction<boolean>>
+    setEditMode: MouseEventHandler<HTMLButtonElement>
 }

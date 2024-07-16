@@ -12,7 +12,11 @@ export default function ProductView({ product, setEditMode } : ProductViewProps)
     return (
         <>
             <main className="productDetails">
-                <h1>{product.name}</h1>
+                <div className="topPanel">
+                    <h1>{product.name}</h1>
+                    <button onClick={setEditMode}>Edit</button>
+                </div>
+                
                 <p>{product.description}</p>
                 <section className="productImages">
                     {product.images.map((image: ImageObject) => (

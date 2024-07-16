@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../../store";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useCallback, useState } from "react";
 import ProductView from "./ProductView";
 import ProductEdit from "./ProductEdit";
 
@@ -23,7 +23,9 @@ export default function ProductDetail() {
         )
     }
 
+    const toggleEditMode = useCallback(() => setEditMode(prevState => !prevState), []);
+
     return editMode ? 
-        <ProductView product={product} setEditMode={setEditMode} /> : 
-        <ProductEdit product={product} setEditMode={setEditMode} />;
+        <ProductEdit product={product} setEditMode={toggleEditMode} /> :
+        <ProductView product={product} setEditMode={toggleEditMode} />;
 }
