@@ -10,8 +10,8 @@ export const testData = [
             },
             {
                 url: "https://broken.link.for.testing.notexistingtopleveldomain/400/300",
-                name: "front side"
-            }
+                name: "front side",
+            },
         ]
     },
     {

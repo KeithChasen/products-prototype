@@ -73,6 +73,30 @@ h1 {
   border: 1px solid darkgray;
 }
 
+.productDetails {
+  padding: 1rem;
+  background: grey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.productImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: .5rem;
+  row-gap: .1rem;
+}
+
+.productImages div {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainError {
+  color: red;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
