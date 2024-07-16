@@ -1,19 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
-import { RootState } from "../store";
-import { update } from "../storage/slices/productSlice";
+import { ImageObject, ProductViewProps } from "../../types/product";
 
-export default function ProductDetail() {
-
-    const { id } = useParams<{ id: string }>();
-    const product = useSelector(
-        (state: RootState) => state.product.products.find(
-            product => product.number === id
-        )
-    );
-
-    const dispatch = useDispatch();
-
+export default function ProductView({ product, setEditMode } : ProductViewProps) {
     if (!product) {
         return (
             <main className="mainError">
@@ -28,7 +15,7 @@ export default function ProductDetail() {
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
                 <section className="productImages">
-                    {product.images.map(image => (
+                    {product.images.map((image: ImageObject) => (
                         <div>
                             <span>{image.name}</span>
                             <img 

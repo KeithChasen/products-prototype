@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { RootState } from "../store";
+import type { RootState } from "../../store";
 import { useSelector } from "react-redux";
 
 export default function ProductList() {

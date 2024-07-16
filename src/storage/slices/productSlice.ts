@@ -1,21 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { testData } from './data';
+import { Product } from '../../types/product';
 
 export interface ProductState {
     products: Product[]
-}
-
-export type Product = {
-    name: string
-    number: string
-    description: string
-    images: ImageObject[]
-}
-
-export type ImageObject = {
-    url: string,
-    name: string
 }
 
 const initialState: ProductState = {
