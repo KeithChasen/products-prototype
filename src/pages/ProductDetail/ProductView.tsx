@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageObject, ProductViewProps } from "../../types/product";
 
 export default function ProductView({ product, setEditMode } : ProductViewProps) {
