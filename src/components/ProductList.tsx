@@ -4,7 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { update } from "../storage/slices/productSlice";
 
 export default  function ProductList() {
-    const value = useSelector((state: RootState) => state.product.value);
+    const products = useSelector((state: RootState) => state.product.products);
+
+    console.log(products, 'products')
+
     const dispatch = useDispatch();
 
     return (
