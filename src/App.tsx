@@ -1,4 +1,3 @@
-import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProductDetail from './pages/ProductDetail'
 import ProductList from './pages/ProductList';
