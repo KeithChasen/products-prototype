@@ -87,6 +87,10 @@ h1 {
   gap: 1rem;
 }
 
+.productDetails input {
+  width: 100%;
+}
+
 .productImages {
   display: grid;
   grid-template-columns: 1fr 1fr;

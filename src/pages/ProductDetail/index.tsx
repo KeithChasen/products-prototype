@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../../store";
-import { SetStateAction, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import ProductView from "./ProductView";
 import ProductEdit from "./ProductEdit";
 
