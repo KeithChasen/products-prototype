@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChangeEvent, useState, MouseEvent } from "react";
 import { useDispatch } from "react-redux";
 import { update } from "../../storage/slices/productSlice";
